@@ -1,0 +1,7 @@
+name = Islandora audio.js global
+description = "A window-wide audio player that can play all tracks visible in the window."
+dependencies[] = libraries
+dependencies[] = islandora_audiojs
+core = 7.x
+version = 7.x-dev
+package = Islandora Awesome

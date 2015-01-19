@@ -1,0 +1,27 @@
+#block-islandora-audiojs-global-audiojs-global {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    border: 2px black solid;
+    z-index: 2000;
+}
+
+.audiojs-global-link.silent:after {
+    content: '  \f026';
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    padding-left: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.audiojs-global-link.playing:after {
+    content: '  \f028';
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    padding-left: 4px;
+    text-decoration: none;
+    display: inline-block;
+}

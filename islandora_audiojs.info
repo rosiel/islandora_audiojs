@@ -1,0 +1,7 @@
+name = Islandora audio.js
+description = "A plugin allowing audio.js to play Islandora content"
+dependencies[] = libraries
+dependencies[] = libraries
+core = 7.x
+version = 7.x-dev
+package = Islandora Viewers

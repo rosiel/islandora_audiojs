@@ -1,0 +1,38 @@
+<?php
+/**
+ * Implements hook_block_info().
+ */
+function islandora_audiojs_global_block_info() {
+  return array(
+    'audiojs_global' => array(
+      'info' => 'Audio.js global player',
+      'cache' => DRUPAL_NO_CACHE,
+    ),
+  );
+}
+
+/**
+ *  Implements hook_block_view().
+ */
+function islandora_audiojs_global_block_view($delta) {
+  $block = array();
+  if ($delta == 'audiojs_global') {
+    drupal_add_css(drupal_get_path('module', 'islandora_audiojs_global') . '/css/audiojs_global.css');
+    $block['subject'] = '';
+    $block['content'] = islandora_audiojs_global_content();
+  }
+  return $block;
+}
+
+/**
+ * Generate the content of the global player block.
+ */
+function islandora_audiojs_global_content() {
+  $audiojs_path = libraries_get_path("audiojs");
+  drupal_add_js($audiojs_path . "/audiojs/audio.min.js");
+  drupal_add_css($audiojs_path . 'includes/index.css');
+  drupal_add_js(drupal_get_path('module', 'islandora_audiojs_global') . '/js/initialize.js', array('weight' => 20));
+  $content = array();
+  $content['#markup'] = '<audio class="audiojs audiojs-global" preload="none" />';
+  return $content;
+}
