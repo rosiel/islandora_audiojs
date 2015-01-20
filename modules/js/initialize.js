@@ -9,10 +9,21 @@
 
             $('.audiojs-global-link').click(function(e) {
                 e.preventDefault();
-                $('.audiojs-global-link').removeClass('playing');
-                $(this).addClass('playing');
-                audio.load($(this).attr('data-source'));
-                audio.play();
+                if ($(this).hasClass('playing')) {
+                    audio.pause();
+                    $(this).removeClass('playing');
+                }
+                else {
+                    $('.audiojs-global-link').removeClass('playing');
+                    $(this).addClass('playing');
+                    audio.load($(this).attr('data-source'));
+                    audio.play();
+                }
+            });
+
+            $('.playing').click(function(e) {
+
+
             });
 
 
