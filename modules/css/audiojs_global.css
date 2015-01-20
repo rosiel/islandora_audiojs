@@ -1,11 +1,14 @@
 #block-islandora-audiojs-global-audiojs-global {
     position: fixed;
-    left: 0px;
+    right: 0px;
     bottom: 0px;
-    border: 2px black solid;
     z-index: 2000;
+    width: 100%;
+    background: #444;
 }
-
+#block-islandora-audiojs-global-audiojs-global .audiojs{
+    float: right;
+}
 .audiojs-global-link.silent:after {
     content: '  \f026';
     font-family: FontAwesome;
