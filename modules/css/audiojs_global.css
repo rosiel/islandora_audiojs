@@ -28,3 +28,9 @@
     text-decoration: none;
     display: inline-block;
 }
+
+.now-playing {
+    max-width: 40%;
+    float: right;
+    color: white;
+}

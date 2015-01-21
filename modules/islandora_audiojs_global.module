@@ -33,6 +33,6 @@ function islandora_audiojs_global_content() {
   drupal_add_css($audiojs_path . 'includes/index.css');
   drupal_add_js(drupal_get_path('module', 'islandora_audiojs_global') . '/js/initialize.js', array('weight' => 20));
   $content = array();
-  $content['#markup'] = '<audio class="audiojs audiojs-global" preload="none" />';
+  $content['#markup'] = '<audio class="audiojs audiojs-global" preload="none"></audio> <div class="now-playing"></div> ';
   return $content;
 }

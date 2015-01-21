@@ -3,10 +3,15 @@
     Drupal.behaviors.myModuleBehavior = {
         attach: function (context, settings) {
             var audio_element = $('.audiojs-global');
-            var a = audiojs.createAll({}, audio_element);
+            var a = audiojs.createAll({
+                trackEnded: function() {
+                  $('.playing').removeClass('playing');
+                }
+            }, audio_element);
+
             // TODO: Add next.
             var audio = a[0];
-
+            var now_playing = $('.now-playing');
             $('.audiojs-global-link').click(function(e) {
                 e.preventDefault();
                 if ($(this).hasClass('playing')) {
@@ -18,15 +23,9 @@
                     $(this).addClass('playing');
                     audio.load($(this).attr('data-source'));
                     audio.play();
+                    now_playing.text($(this).text());
                 }
             });
-
-            $('.playing').click(function(e) {
-
-
-            });
-
-
         }
     };
 
