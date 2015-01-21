@@ -5,7 +5,7 @@
             var audio_element = $('.audiojs-global');
             var a = audiojs.createAll({
                 trackEnded: function() {
-                  $('.playing').removeClass('playing');
+                  $('audiojs-global-link.playing').removeClass('playing');
                 }
             }, audio_element);
 
