@@ -1,12 +1,14 @@
-#block-islandora-audiojs-global-audiojs-global {
+.pane-islandora-audiojs-global-audiojs-global {
     position: fixed;
     right: 0px;
     bottom: 0px;
     z-index: 499;
     width: 100%;
     background: #444;
+    margin-bottom: 0px;
 }
-#block-islandora-audiojs-global-audiojs-global .audiojs{
+
+.pane-islandora-audiojs-global-audiojs-global .audiojs{
     float: right;
 }
 .audiojs-global-link.silent:after {
@@ -33,4 +35,20 @@
     max-width: 40%;
     float: right;
     color: white;
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.2.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
