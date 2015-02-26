@@ -17,7 +17,9 @@ function islandora_audiojs_global_block_info() {
 function islandora_audiojs_global_block_view($delta) {
   $block = array();
   if ($delta == 'audiojs_global') {
-    drupal_add_library('fontawesome', 'fontawesome');
+    if (file_exists(libraries_get_path('fontawesome') . '/css/font-awesome.css')) {
+      drupal_add_css(libraries_get_path('fontawesome') . '/css/font-awesome.css');
+    }
 
     drupal_add_css(drupal_get_path('module', 'islandora_audiojs_global') . '/css/audiojs_global.css');
     $block['subject'] = '';
@@ -30,6 +32,7 @@ function islandora_audiojs_global_block_view($delta) {
  * Generate the content of the global player block.
  */
 function islandora_audiojs_global_content() {
+
   $audiojs_path = libraries_get_path("audiojs");
   drupal_add_js($audiojs_path . "/audiojs/audio.min.js");
   drupal_add_css($audiojs_path . 'includes/index.css');
