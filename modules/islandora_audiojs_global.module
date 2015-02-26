@@ -17,6 +17,8 @@ function islandora_audiojs_global_block_info() {
 function islandora_audiojs_global_block_view($delta) {
   $block = array();
   if ($delta == 'audiojs_global') {
+    drupal_add_library('fontawesome', 'fontawesome');
+
     drupal_add_css(drupal_get_path('module', 'islandora_audiojs_global') . '/css/audiojs_global.css');
     $block['subject'] = '';
     $block['content'] = islandora_audiojs_global_content();
