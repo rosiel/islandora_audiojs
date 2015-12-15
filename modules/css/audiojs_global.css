@@ -47,6 +47,9 @@
 }
 
 span.audiojs-notice {
-    color: #333;
+    color: #bbb;
     float: left;
+    font-family: sans-serif;
+    font-size: 0.8em;
+    padding-top: 0.8em;
 }
