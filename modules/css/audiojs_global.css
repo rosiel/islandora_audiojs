@@ -45,3 +45,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+span.audiojs-notice {
+    color: #333;
+    float: left;
+}
